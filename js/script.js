@@ -1,11 +1,18 @@
-/*SEARCH BY  CITY NAME (e.g. bulawayo) OR A COMMA-SEPARATED CITY NAMES ALONG WITH THE COUNTRY CODE (e.g. bulawayo,gr)*/
+/*************************************************************************************
+	SEARCH BY  CITY NAME (e.g. bulawayo) 
+	OR A COMMA-SEPARATED CITY NAMES ALONG WITH THE COUNTRY CODE (e.g. bulawayo,gr)
+*************************************************************************************/
 const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
 
 
-/* API KEY from openweathermap.org */
+/**********************************************************
+	API KEY
+	Create your own API via openweathermap.org/API
+	because the one used here map fail
+**********************************************************/
 const apiKey = "b80b86ee25b9cce71b21df66eb547691";
 
 form.addEventListener("submit", e => {
@@ -47,7 +54,7 @@ form.addEventListener("submit", e => {
 		}
 	}
 
-	//ajax here
+	//ajax API goes here
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
 	fetch(url)
@@ -62,21 +69,19 @@ form.addEventListener("submit", e => {
 			const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
         weather[0]["icon"]
       }.svg`;
-
 			const li = document.createElement("li");
 			li.classList.add("city");
 			const markup = `
-        <h2 class="city-name" data-name="${name},${sys.country}">
-          <span>${name}</span>
-          <sup>${sys.country}</sup>
+		<h2 class="city-name" data-name="${name},${sys.country}">
+			<span>${name}</span>
+			<sup>${sys.country}</sup>
         </h2>
         <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
-        <figure>
-          <img class="city-icon" src="${icon}" alt="${
-        weather[0]["description"]
-      }">
-          <figcaption>${weather[0]["description"]}</figcaption>
-        </figure>
+		<figure>
+			<img class="city-icon" src="${icon}" alt="${weather[0]["description"]
+	  }">
+	  
+	  <figcaption>${weather[0]["description"]}</figcaption></figure>
       `;
 			li.innerHTML = markup;
 			list.appendChild(li);
