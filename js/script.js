@@ -90,7 +90,7 @@ form.addEventListener("submit", e => {
 			list.appendChild(li);
 		})
 		.catch(() => {
-			msg.textContent = "Search for a fucken real valid city 😩";
+			msg.textContent = "Search for a real fucken city 🥵";
 		});
 
 	msg.textContent = "";
