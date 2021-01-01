@@ -1,4 +1,4 @@
-# Weather App - Using Open
+# Weather App - using OpenWeather API
 
 ## Add Dependencies
 ###### Installation Command/s
