@@ -186,14 +186,13 @@ body {
 
 
 /* FOOTER */
-.page-footer {
-	text-align: right;
+footer {
 	font-size: 1rem;
 	color: var(--text_light);
 	margin-top: 40px;
 }
 
-.page-footer span {
+footer span {
 	color: var(--red);
 }
 
