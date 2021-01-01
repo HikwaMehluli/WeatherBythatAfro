@@ -1,5 +1,10 @@
-# thatAfroWeather
+# Weather App - Using Open
 
-Dependency
+## Add Dependencies
+###### Installation Command/s
 
-SASS - npm install sass
+npm i sass --save-dev
+
+###### Source of Dependencies
+
+SASS - https://sass-lang.com/install
