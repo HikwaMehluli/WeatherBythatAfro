@@ -49,15 +49,14 @@ form.addEventListener("submit", e => {
 
 		if (filteredArray.length > 0) {
 			msg.textContent = `You already know the weather for ${
-        filteredArray[0].querySelector(".city-name span").textContent
-      } ...otherwise be more specific by providing the country code as well 😉`;
+		filteredArray[0].querySelector(".city-name span").textContent } ...otherwise be more specific African`;
 			form.reset();
 			input.focus();
 			return;
 		}
 	}
 
-	//ajax API goes here
+	//ajax API call - the art
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
 	fetch(url)
@@ -76,8 +75,8 @@ form.addEventListener("submit", e => {
 		<h2 class="city-name" data-name="${name},${sys.country}">
 			<span>${name}</span>
 			<sup>${sys.country}</sup>
-        </h2>
-        <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+		</h2>
+		<div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
 		<figure>
 			<img class="city-icon" src="${icon}" alt="${weather[0]["description"]
 		}">
