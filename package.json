@@ -11,6 +11,8 @@
 	"author": "thatAfro",
 	"license": "ISC",
 	"devDependencies": {
-		"sass": "^1.32.0"
+		"sass": "^1.32.0",
+		"webpack": "^5.11.1",
+		"webpack-cli": "^4.3.1"
 	}
 }
