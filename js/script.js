@@ -1,4 +1,4 @@
-/*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
+/*SEARCH BY  CITY NAME (e.g. bulawayo) OR A COMMA-SEPARATED CITY NAMES ALONG WITH THE COUNTRY CODE (e.g. bulawayo,gr)*/
 const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner .msg");
@@ -19,9 +19,9 @@ form.addEventListener("submit", e => {
 	if (listItemsArray.length > 0) {
 		const filteredArray = listItemsArray.filter(el => {
 			let content = "";
-			//athens,gr
+			//bulawayo,gr
 			if (inputVal.includes(",")) {
-				//athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
+				//bulawayo,grrrrrr->invalid country code, so we keep only the first part of inputVal
 				if (inputVal.split(",")[1].length > 2) {
 					inputVal = inputVal.split(",")[0];
 					content = el
@@ -31,7 +31,7 @@ form.addEventListener("submit", e => {
 					content = el.querySelector(".city-name").dataset.name.toLowerCase();
 				}
 			} else {
-				//athens
+				//bulawayo
 				content = el.querySelector(".city-name span").textContent.toLowerCase();
 			}
 			return content == inputVal.toLowerCase();
@@ -82,7 +82,7 @@ form.addEventListener("submit", e => {
 			list.appendChild(li);
 		})
 		.catch(() => {
-			msg.textContent = "Please search for a valid city 😩";
+			msg.textContent = "Search for a fucken real valid city 😩";
 		});
 
 	msg.textContent = "";
