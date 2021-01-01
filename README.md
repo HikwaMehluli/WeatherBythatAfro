@@ -6,13 +6,13 @@ Weather App using vanilla.js & Open Weather API
 
 Visit openweathermap.org/API
 
-1 - Get an API key from [openweathermap.org/API](http://google.com)
+1 - Get an API key from [openweathermap.org/API](https://openweathermap.org/API)
 
 2 - Add the Key in the JS file on line 19 - Mine won't work on your server
 
 3 - Build somthing epic, this was a study lesson for me
 
-4 - Tweet Me [https://twitter.com/Hikwmehluli](http://google.com)
+4 - Tweet Me [https://twitter.com/Hikwmehluli](https://twitter.com/Hikwamehluli)
 
 ## Add Dependencies
 ###### Installation Command/s
