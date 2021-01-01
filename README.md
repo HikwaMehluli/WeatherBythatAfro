@@ -1,5 +1,7 @@
 # Weather App - using OpenWeather API
 
+Weather App using vanilla.js & Open Weather API
+
 ## How it works!
 
 Visit openweathermap.org/API
