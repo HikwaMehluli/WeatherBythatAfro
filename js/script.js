@@ -1,6 +1,6 @@
 /*************************************************************************************
 	SEARCH BY  CITY NAME (e.g. bulawayo) 
-	OR A COMMA-SEPARATED CITY NAMES ALONG WITH THE COUNTRY CODE (e.g. bulawayo,gr)
+	OR A COMMA-SEPARATED CITY NAMES ALONG WITH THE COUNTRY CODE (e.g. bulawayo,zw)
 *************************************************************************************/
 const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
@@ -29,9 +29,9 @@ form.addEventListener("submit", e => {
 	if (listItemsArray.length > 0) {
 		const filteredArray = listItemsArray.filter(el => {
 			let content = "";
-			//bulawayo,gr
+			//bulawayo,zw
 			if (inputVal.includes(",")) {
-				//bulawayo,grrrrrr->invalid country code, so we keep only the first part of inputVal
+				//bulawayo,zw -> invalid country code, so we keep only the first part of inputVal
 				if (inputVal.split(",")[1].length > 2) {
 					inputVal = inputVal.split(",")[0];
 					content = el
@@ -69,9 +69,7 @@ form.addEventListener("submit", e => {
 				sys,
 				weather
 			} = data;
-			const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
-        weather[0]["icon"]
-      }.svg`;
+			const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0]["icon"]}.svg`;
 			const li = document.createElement("li");
 			li.classList.add("city");
 			const markup = `
@@ -82,18 +80,18 @@ form.addEventListener("submit", e => {
         <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
 		<figure>
 			<img class="city-icon" src="${icon}" alt="${weather[0]["description"]
-	  }">
-	  
-	  <figcaption>${weather[0]["description"]}</figcaption></figure>
-      `;
+		}">
+		
+		<figcaption>${weather[0]["description"]}</figcaption></figure>`;
 			li.innerHTML = markup;
 			list.appendChild(li);
 		})
+
 		.catch(() => {
 			msg.textContent = "Search for a real fucken city 🥵";
 		});
 
-	msg.textContent = "";
-	form.reset();
-	input.focus();
+		msg.textContent = "";
+		form.reset();
+		input.focus();
 });
