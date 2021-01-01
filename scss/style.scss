@@ -5,7 +5,11 @@
 * Url: http://www.thatafro.com
 */
 
-/* RESET */
+
+
+
+
+/* RESET STYLES */
 :root {
 	--bg_main: #001d50;
 	--text_light: white;
@@ -125,67 +129,72 @@ body {
 /* SECTION #2 */
 .ajax-section {
 	margin: 70px 0 20px;
+
+	.cities {
+		display: grid;
+		grid-gap: 32px 20px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.city {
+		position: relative;
+		padding: 40px 10%;
+		border-radius: 20px;
+		background: var(--text_light);
+		color: var(--text_med);
+
+		&::after {
+			content: '';
+			width: 90%;
+			height: 50px;
+			position: absolute;
+			bottom: -12px;
+			left: 5%;
+			z-index: -1;
+			opacity: 0.3;
+			border-radius: 20px;
+			background: var(--text_light);
+		}
+
+		sup {
+			font-size: 0.5em;
+		}
+	}
+
+	figcaption {
+		margin-top: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.city-temp {
+		font-size: 5rem;
+		font-weight: bold;
+		margin-top: 10px;
+		color: var(--text_dark);
+	}
+
+	.city-name sup {
+		padding: 0.2em 0.6em;
+		border-radius: 30px;
+		color: var(--text_light);
+		background: var(--orange);
+	}
+
+	.city-icon {
+		margin-top: 10px;
+		width: 100px;
+		height: 100px;
+	}
 }
 
-.ajax-section .cities {
-	display: grid;
-	grid-gap: 32px 20px;
-	grid-template-columns: repeat(4, 1fr);
-}
-
-.ajax-section .city {
-	position: relative;
-	padding: 40px 10%;
-	border-radius: 20px;
-	background: var(--text_light);
-	color: var(--text_med);
-}
-
-.ajax-section .city::after {
-	content: '';
-	width: 90%;
-	height: 50px;
-	position: absolute;
-	bottom: -12px;
-	left: 5%;
-	z-index: -1;
-	opacity: 0.3;
-	border-radius: 20px;
-	background: var(--text_light);
-}
-
-.ajax-section figcaption {
-	margin-top: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-}
-
-.ajax-section .city-temp {
-	font-size: 5rem;
-	font-weight: bold;
-	margin-top: 10px;
-	color: var(--text_dark);
-}
-
-.ajax-section .city sup {
-	font-size: 0.5em;
-}
-
-.ajax-section .city-name sup {
-	padding: 0.2em 0.6em;
-	border-radius: 30px;
-	color: var(--text_light);
-	background: var(--orange);
-}
-
-.ajax-section .city-icon {
-	margin-top: 10px;
-	width: 100px;
-	height: 100px;
-}
 
 
-/* FOOTER */
+
+
+/*****************************************
+	FOOTER
+*****************************************/
 footer {
 	font-size: 1rem;
 	color: var(--text_light);
@@ -197,7 +206,12 @@ footer span {
 }
 
 
-/* MQ's*/
+
+
+
+/*****************************************
+	MQ's
+*****************************************/
 @media screen and (max-width: 1000px) {
 	body {
 		padding: 30px;
@@ -217,11 +231,22 @@ footer span {
 
 	.ajax-section {
 		margin-top: 20px;
+
+		.cities {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	.top-banner form {
 		flex-direction: column;
 		align-items: flex-start;
+
+		.msg {
+			position: static;
+			max-width: none;
+			min-height: 0;
+			margin-top: 10px;
+		}
 	}
 
 	.top-banner form input,
@@ -231,17 +256,6 @@ footer span {
 
 	.top-banner form button {
 		margin: 20px 0 0 0;
-	}
-
-	.top-banner form .msg {
-		position: static;
-		max-width: none;
-		min-height: 0;
-		margin-top: 10px;
-	}
-
-	.ajax-section .cities {
-		grid-template-columns: repeat(2, 1fr);
 	}
 }
 

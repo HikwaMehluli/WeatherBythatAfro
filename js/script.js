@@ -8,6 +8,9 @@ const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
 
 
+
+
+
 /**********************************************************
 	API KEY
 	Create your own API via openweathermap.org/API
