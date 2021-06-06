@@ -1,6 +1,7 @@
 # Weather App - using OpenWeather API
 
 Weather App using vanilla.js & Open Weather API
+[View App](https://hikwamehluli.github.io/WeatherBythatAfro)
 
 ## How it works!
 
