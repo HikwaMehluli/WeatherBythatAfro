@@ -1,5 +1,5 @@
 {
-	"name": "WeatherBythatAfro",
+	"name": "weather-app-thatafro",
 	"version": "1.5.0",
 	"description": "Weather App - using OpenWeather API",
 	"scripts": {
