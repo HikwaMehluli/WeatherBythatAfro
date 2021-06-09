@@ -17,8 +17,9 @@ Visit openweathermap.org/API
 
 ## Add Dependencies
 ###### Installation Command/s
-
+```
 npm i webpack webpack-cli sass --save-dev
+```
 
 ###### Source of Dependencies
 
