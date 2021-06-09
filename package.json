@@ -1,6 +1,6 @@
 {
 	"name": "WeatherBythatAfro",
-	"version": "1.0.0",
+	"version": "1.5.0",
 	"description": "Weather App - using OpenWeather API",
 	"scripts": {
 		"css-prod": "sass --no-source-map --watch scss/style.scss:css/app.css --style compressed",
