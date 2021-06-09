@@ -1,10 +1,8 @@
 # Weather App - using OpenWeather API
-
 Weather App using vanilla.js & Open Weather API
 [View App](https://hikwamehluli.github.io/WeatherBythatAfro)
 
 ## How it works!
-
 Visit openweathermap.org/API
 
 1 - Get an API key from [openweathermap.org/API](https://openweathermap.org/API)
@@ -22,7 +20,6 @@ npm i webpack webpack-cli sass --save-dev
 ```
 
 ###### Source of Dependencies
-
 Webpack - https://webpack.js.org/guides/installation/
 
 SASS - https://sass-lang.com/install
